@@ -59,17 +59,17 @@ function getPowerFunction(exponent) {
  * @return {Function}
  *
  * @example
- *   getPolynom(2,3,5) => y = a*x^2 + b*x + c
+ *   getPolynom(2,3,5) => y = 2*x^2 + 3*x + 5
  *   getPolynom(1,-3)  => y = x - 3
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom(/* ...args */) {
-  throw new Error('Not implemented');
-  // if (args.length === 3) return (x) => args[0] * x ** 2 + args[1] * x + args[2];
-  // if (args.length === 2) return (x) => args[0] * x + args[1];
-  // if (args.length === 1) return () => args[0];
-  // return null;
+function getPolynom(...args) {
+  // throw new Error('Not implemented');
+  if (args.length === 3) return (x) => args[0] * x ** 2 + args[1] * x + args[2];
+  if (args.length === 2) return (x) => args[0] * x + args[1];
+  if (args.length === 1) return () => args[0];
+  return null;
 }
 
 
